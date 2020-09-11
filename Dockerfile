@@ -16,6 +16,8 @@ RUN ln -s /usr/bin/gcc-5 /usr/bin/gcc
 RUN apt-get install -y curl wget git
 RUN apt-get install -y vim emacs
 
+RUN sed -i 's/# set bell-style none/set bell-style none/g' /etc/inputrc
+
 ADD run.sh /tmp/run.sh
 RUN chmod u+x /tmp/run.sh
 
